@@ -1,0 +1,1 @@
+web: gunicorn erpangea.wsgi --log-file -
