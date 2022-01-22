@@ -1,5 +1,12 @@
 language: python
 python:
   - 3.10
+env:
+  global:
+    - PIPENV_VENVV_IN_PROJECT=1
+    - PIPENV_IGNORE_VIRTUALENVS=1
+install:
+  - pip install pipenv
+  - pipenv sync --dev
 script:
-  - flake8
+  - pipenv run flake8 .
